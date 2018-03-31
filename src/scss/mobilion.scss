@@ -1,5 +1,10 @@
 $background: #C42C31;
 
+@mixin placeholder-style() {
+  font-family: 'Montserrat ExtraLight', sans-serif;
+  color: whitesmoke;
+}
+
 html {
   width: 100%;
   height: 100%;
@@ -29,7 +34,7 @@ body {
       }
 
       &.right {
-        text-align: end;
+        text-align: right;
       }
     }
   }
@@ -43,6 +48,7 @@ body {
   justify-content: center;
 
   .input-group {
+    width: auto;
     border: 2px white solid;
     border-radius: 2em;
     color: white;
@@ -64,11 +70,14 @@ body {
       background-color: transparent;
       border: none;
 
-      text-align: end;
+      text-align: right;
 
-      &::placeholder {
-        font-family: 'Montserrat ExtraLight', sans-serif;
-        color: whitesmoke;
+      &::-webkit-input-placeholder {
+        @include placeholder-style();
+      }
+
+      &::-ms-input-placeholder {
+        @include placeholder-style();
       }
     }
     .suffix {
@@ -86,4 +95,7 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+input[type=number] {
+  -moz-appearance:textfield;
 }

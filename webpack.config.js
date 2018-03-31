@@ -5,7 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: ['./src/js/mobilion.ts', './src/scss/mobilion.scss']
+        app: ['./src/ts/mobilion.ts', './src/scss/mobilion.scss']
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
