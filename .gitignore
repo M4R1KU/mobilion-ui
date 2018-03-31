@@ -1,2 +1,4 @@
 .idea/
 mobilion-ui.iml
+dist/
+node_modules/

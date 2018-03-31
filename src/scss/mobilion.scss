@@ -1,0 +1,89 @@
+$background: #C42C31;
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+
+  background-color: $background;
+  color: white;
+  font-family: 'Montserrat Light', sans-serif;
+  letter-spacing: 0.3em;
+}
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  .title-container {
+    margin: 8px;
+    display: flex;
+    > * {
+      flex-basis: 50%;
+    }
+    .title {
+      margin: 0;
+      max-width: 50%;
+      strong {
+        font-family: 'Montserrat SemiBold', sans-serif;
+      }
+
+      &.right {
+        text-align: end;
+      }
+    }
+  }
+}
+
+.mobilion-calculator {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .input-group {
+    border: 2px white solid;
+    border-radius: 2em;
+    color: white;
+    font-family: 'Montserrat Light', sans-serif;
+
+    font-size: 4em;
+    position: relative;
+
+    > * {
+      padding: 1em;
+    }
+
+    #calculator-input {
+      font-family: inherit;
+      color: inherit;
+      font-size: inherit;
+
+      outline: none;
+      background-color: transparent;
+      border: none;
+
+      text-align: end;
+
+      &::placeholder {
+        font-family: 'Montserrat ExtraLight', sans-serif;
+        color: whitesmoke;
+      }
+    }
+    .suffix {
+      position: relative;
+      border-left: 2px solid white;
+    }
+  }
+
+  #calculator-result {
+    font-size: 2em;
+  }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
